@@ -7,6 +7,9 @@
         body {
             background-color: rgb(27, 37, 39);
         }
+        input {
+            margin: 10px;
+        }
         #title {
             color: rgb(208, 255, 0);
             text-align: center;
@@ -40,29 +43,15 @@
     <h1 id="title">Madlibs</h1>
     <form id="form" action="" method="post">
         {% csrf_token %}
-        <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="adjective" aria-label="First name" name="adjective">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Another verb" aria-label="Last name" name="verb2">
-            </div>
-        </div>
-        <div id="space">
-
-        </div>
-        <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Verb" aria-label="First name" name="verb1">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Famous person" aria-label="Last name" name="famous_person">
-            </div>
-        </div>
+        <input type="text" class="form-control" placeholder="adjective" name="adjective">
+        <input type="text" class="form-control" placeholder="Another verb" name="verb2">
+        <input type="text" class="form-control" placeholder="Verb" name="verb1">
+        <input type="text" class="form-control" placeholder="Famous person" name="famous_person">
         <input type="submit" id="submit">
     </form>
     {% if message %}
-        <div> {{ message }} </div>
+    <div id="message">
+        <h4> {{ message }} </h4>
+    </div>
     {% endif %}
-
 {% endblock %}

@@ -13,7 +13,7 @@ def index(request):
         result = f"Computer programming is so {adj}! It makes me so excited all the time because" \
                  f"I love to {verb1}. Stay positive and {verb2} like you are {famous_person}"
         
-        return render(request, 'madlibs/index.html', {
+        return render(request, "madlibs/index.html", {
             "message": result
         })
     else:
