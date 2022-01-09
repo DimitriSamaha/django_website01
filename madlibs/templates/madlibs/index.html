@@ -26,7 +26,7 @@
         }
 
         #message {
-            color: darkred;
+            color: rgb(208, 255, 0);
             margin-left: 10px;
             margin-right: 10px;
         }
@@ -44,8 +44,8 @@
     <form id="form" action="" method="post">
         {% csrf_token %}
         <input type="text" class="form-control" placeholder="adjective" name="adjective">
-        <input type="text" class="form-control" placeholder="Another verb" name="verb2">
         <input type="text" class="form-control" placeholder="Verb" name="verb1">
+        <input type="text" class="form-control" placeholder="Another verb" name="verb2">
         <input type="text" class="form-control" placeholder="Famous person" name="famous_person">
         <input type="submit" id="submit">
     </form>
@@ -54,4 +54,5 @@
         <h4> {{ message }} </h4>
     </div>
     {% endif %}
-{% endblock %}
+    <a href="{% url 'home:index' %}">Back to menu</a>
+{% endblock %} 
