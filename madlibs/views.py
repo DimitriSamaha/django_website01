@@ -21,7 +21,7 @@ def index(request):
         if len(inputs) != 4 :
             result = "Please fill all the form, Thank you!"
         else:
-            result = f"Computer programming is so {adj}! It makes me so excited all the time because" \
+            result = f"Computer programming is so {adj}! It makes me so excited all the time because " \
                      f"I love to {verb1}. Stay positive and {verb2} like you are {famous_person}"
         
         return render(request, "madlibs/index.html", {

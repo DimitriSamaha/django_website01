@@ -3,8 +3,9 @@ from django.shortcuts import redirect, render
 from django.urls.base import reverse
 
 import sys
-sys.path.append('C:/dimi_coding/web/game_01')
-import rock_paper_scissors as rps
+sys.path.append('..')
+from game_01 import rock_paper_scissors as rps
+## import rock_paper_scissors as rps
 
 
 # Create your views here.
