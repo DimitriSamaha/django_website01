@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'home',
     'RockPaperScissors',
     'madlibs',
+    'speed_test',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

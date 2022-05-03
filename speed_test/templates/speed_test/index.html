@@ -1,4 +1,4 @@
-{% extends 'home/layout.html' %}
+{% extends 'speed_test/layout.html' %}
 
 {% block head %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -19,13 +19,14 @@
 {% endblock %}
 
 {% block body %}
-    <h1 id="title">Welcome</h1>
-    <div class="text">
-        <h3>Already have and account?</h3>
-        <a href="{% url 'home:login' %}">login</a>
-    </div>
-    <div class="text">
-        <h3>New and Dont have an account? Sign in right now for free!</h3>
-        <a href="{% url 'home:register' %}">register</a>
-    </div>
+<h1 id="title">Speed test</h1>
+<div class="text">
+    <ul>
+        <li><a href="{% url 'speed_test:type_test' %}">Words</a></li>
+        <li><a href="{% url 'speed_test:equ_solve' %}">Equations</a></li>
+    </ul>
+</div>
+<div class="text">
+    <a href="{% url 'home:index' %}">back to menu</a>
+</div>
 {% endblock %}

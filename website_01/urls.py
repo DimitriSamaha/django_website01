@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('home.urls')),
     path('rockpaperscissors/', include('RockPaperScissors.urls')),
-    path('madlibs/', include('madlibs.urls'))
+    path('madlibs/', include('madlibs.urls')),
+    path('speed_test/', include('speed_test.urls'))
 ]
